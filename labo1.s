@@ -26,7 +26,7 @@ main:
         code ici  
                   */
 valide: 
-    mov x0, msgValide
+    //mov x0, msgValide
     bl printf
 invalide:
     bl printf
