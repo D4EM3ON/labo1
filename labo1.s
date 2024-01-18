@@ -28,16 +28,6 @@ main:
     // Vérifier triplet (a, b, c)
     // et afficher résultat
 
-    adr   x0, fmtEntree            
-    mov   x1, x19
-    bl printf
-    adr x0, fmtString
-    adr x1,  msgNewline
-    bl printf
-    adr   x0, fmtEntree            
-    mov   x1, x20
-    bl printf
-
     cmp x19, x20
     b.hi invalide // regarder que n'est pas 
 
@@ -49,16 +39,6 @@ main:
 
     cmp x19, x21
     b.ne invalide
-
-    adr   x0, fmtEntree            
-    mov   x1, x19
-    bl printf
-    adr x0, fmtString
-    adr x1,  msgNewline
-    bl printf
-    adr   x0, fmtEntree            
-    mov   x1, x21
-    bl printf
     
     adr x0, fmtString
     adr x1, msgValide
