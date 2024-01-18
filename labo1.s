@@ -13,7 +13,7 @@ main:
     ldr   x19, nombre               // a = nombre
     
     adr x0, msgValide
-    mov x1, x19
+    adr x1, msgInvalide
     bl printf
     // Lire b
     //bl scanf
