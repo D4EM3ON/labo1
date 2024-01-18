@@ -14,25 +14,39 @@ main:
     
 
     // Lire b
-    adr   x0, fmtEntree             //
-    adr   x1, nombre                //
-    bl    scanf                     // scanf(&fmtEntree, &nombre)
+    adr   x0, fmtEntree             
+    adr   x1, nombre                
+    bl    scanf                     
     ldr   x20, nombre // b = nombre
 
     // Lire c
-    //bl scanf
-    //ldr x21, nombre // c = nombre
+    adr   x0, fmtEntree            
+    adr   x1, nombre               
+    bl    scanf                    
+    ldr   x20, nombre // c = nombre
 
     // Vérifier triplet (a, b, c)
     // et afficher résultat
-    /*  
-        code ici  
-                  */
+aSmallerB:
+    cmp x19, x20
+    b.hs invalide // regarder que n'est pas 
+
+checkSquare:
+    mul x19, x19, x19
+    mul x20, x20, x20
+    mul x21, x21, x21
+    add x19, x19, x20
+    cmp x19, x21
+    b.ne invalide
+
 valide: 
-    //mov x0, msgValide
-    //bl printf
+    adr x0, fmtString
+    adr x1, msgValide
+    bl printf
 invalide:
-    //bl printf
+    adr x0, fmtString
+    adr x1, msgInvalide
+    bl printf
 
     // Quitter
     mov   x0, 0                     //
