@@ -28,28 +28,14 @@ main:
     // Vérifier triplet (a, b, c)
     // et afficher résultat
 aSmallerB:
-    adr   x0, fmtEntree
-    mov   x1, x19
-    bl printf
-    adr   x0, fmtEntree
-    mov   x1, x20
-    bl printf
-    
     cmp x19, x20
-    b.hs invalide // regarder que n'est pas 
+    b.hi invalide // regarder que n'est pas 
 
 checkSquare:
     mul x19, x19, x19
     mul x20, x20, x20
     mul x21, x21, x21
     add x19, x19, x20
-
-    adr   x0, fmtEntree
-    mov   x1, x19
-    bl printf
-    adr   x0, fmtEntree
-    mov   x1, x21
-    bl printf
 
     cmp x19, x21
     b.ne invalide
