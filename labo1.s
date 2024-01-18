@@ -14,10 +14,9 @@ main:
     
 
     // Lire b
-    adr x1, nombre
-    bl scanf
-
-    ldr x20, nombre // b = nombre
+    adr   x0, fmtEntree             //
+    bl    scanf                     // scanf(&fmtEntree, &nombre)
+    ldr   x20, nombre // b = nombre
 
     // Lire c
     //bl scanf
