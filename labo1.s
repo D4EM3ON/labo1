@@ -29,7 +29,7 @@ main:
     // et afficher résultat
 aSmallerB:
     adr   x0, fmtEntree
-    adr   x1, x19
+    mov   x1, x19
     bl printf
     adr   x0, fmtEntree
     adr   x1, x20
@@ -44,10 +44,10 @@ checkSquare:
     add x19, x19, x20
 
     adr   x0, fmtEntree
-    adr   x1, x19
+    mov   x1, x19
     bl printf
     adr   x0, fmtEntree
-    adr   x1, x21
+    mov   x1, x21
 
     cmp x19, x21
     b.ne invalide
