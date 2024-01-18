@@ -11,7 +11,7 @@ main:
     adr   x1, nombre                //
     bl    scanf                     // scanf(&fmtEntree, &nombre)
     ldr   x19, nombre               // a = nombre
-
+    bl printf
     // Lire b
     //bl scanf
     //ldr x20, nombre // b = nombre
@@ -27,9 +27,9 @@ main:
                   */
 valide: 
     //mov x0, msgValide
-    bl printf
+    //bl printf
 invalide:
-    bl printf
+    //bl printf
 
     // Quitter
     mov   x0, 0                     //
