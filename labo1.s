@@ -29,7 +29,7 @@ valide:
     mov x0, msgValide
     bl printf
 invalide:
-    ret "invalide"
+    bl printf
 
     // Quitter
     mov   x0, 0                     //
