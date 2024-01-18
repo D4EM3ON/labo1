@@ -30,7 +30,6 @@ main:
 
     cmp x19, x20
     b.hi invalide // regarder que n'est pas 
-    b checkSquare
 
     mul x19, x19, x19
     mul x20, x20, x20
@@ -44,7 +43,7 @@ main:
     adr x1, msgValide
     bl printf
     b end
-    
+
 invalide:
     adr x0, fmtString
     adr x1, msgInvalide
