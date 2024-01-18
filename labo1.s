@@ -44,7 +44,7 @@ main:
     mov   x1, x19
     bl printf
     adr x0, fmtString
-    adr x1, .asciz "\n"
+    adr x1,  msgNewline
     adr   x0, fmtEntree            
     mov   x1, 21
     bl printf
@@ -71,5 +71,6 @@ nombre:         .skip   8
 .section ".rodata"
 fmtEntree:      .asciz  "%lu"
 fmtString:         .asciz "%s"
+msgNewline: .asciz "\n"
 msgValide:      .asciz  "valide\n"
 msgInvalide:    .asciz  "invalide\n"
