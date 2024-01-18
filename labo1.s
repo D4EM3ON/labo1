@@ -36,9 +36,19 @@ main:
     mul x21, x21, x21
     add x19, x19, x20
 
+
     cmp x19, x21
     b.ne invalide
 
+    adr   x0, fmtEntree            
+    mov   x1, x19
+    bl printf
+    adr x0, fmtString
+    adr x1 "\n"
+    adr   x0, fmtEntree            
+    mov   x1, 21
+    bl printf
+    
     adr x0, fmtString
     adr x1, msgValide
     bl printf
