@@ -27,11 +27,11 @@ main:
 
     // Vérifier triplet (a, b, c)
     // et afficher résultat
-aSmallerB:
+
     cmp x19, x20
     b.hi invalide // regarder que n'est pas 
+    b checkSquare
 
-checkSquare:
     mul x19, x19, x19
     mul x20, x20, x20
     mul x21, x21, x21
@@ -40,11 +40,11 @@ checkSquare:
     cmp x19, x21
     b.ne invalide
 
-valide: 
     adr x0, fmtString
     adr x1, msgValide
     bl printf
     b end
+    
 invalide:
     adr x0, fmtString
     adr x1, msgInvalide
