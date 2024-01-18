@@ -13,12 +13,12 @@ main:
     ldr   x19, nombre               // a = nombre
 
     // Lire b
-    bl scanf
-    ldr x20, nombre // b = nombre
+    //bl scanf
+    //ldr x20, nombre // b = nombre
 
     // Lire c
-    bl scanf
-    ldr x21, nombre // c = nombre
+    //bl scanf
+    //ldr x21, nombre // c = nombre
 
     // Vérifier triplet (a, b, c)
     // et afficher résultat
