@@ -12,7 +12,7 @@ main:
     bl    scanf                     // scanf(&fmtEntree, &nombre)
     ldr   x19, nombre               // a = nombre
     
-    adr x0, msgValide
+    //adr x0, msgValide
     adr x1, msgInvalide
     bl printf
     // Lire b
