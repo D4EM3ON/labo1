@@ -13,20 +13,23 @@ main:
     ldr   x19, nombre               // a = nombre
 
     // Lire b
-    /*  
-        code ici  
-                  */
+    bl scanf
+    ldr x20, nombre // b = nombre
 
     // Lire c
-    /*  
-        code ici  
-                  */
+    bl scanf
+    ldr x21, nombre // c = nombre
 
     // Vérifier triplet (a, b, c)
     // et afficher résultat
     /*  
         code ici  
                   */
+valide: 
+    mov x0, msgValide
+    bl printf
+invalide:
+    ret "invalide"
 
     // Quitter
     mov   x0, 0                     //
