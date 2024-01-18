@@ -23,7 +23,7 @@ main:
     adr   x0, fmtEntree            
     adr   x1, nombre               
     bl    scanf                    
-    ldr   x20, nombre // c = nombre
+    ldr   x21, nombre // c = nombre
 
     // Vérifier triplet (a, b, c)
     // et afficher résultat
