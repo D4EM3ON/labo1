@@ -32,7 +32,7 @@ aSmallerB:
     mov   x1, x19
     bl printf
     adr   x0, fmtEntree
-    adr   x1, x20
+    mov   x1, x20
 
     cmp x19, x20
     b.hs invalide // regarder que n'est pas 
