@@ -12,12 +12,10 @@ main:
     bl    scanf                     // scanf(&fmtEntree, &nombre)
     ldr   x19, nombre               // a = nombre
     
-    adr x0, fmtString
-    adr x1, msgInvalide
-    bl printf
+
     // Lire b
-    //bl scanf
-    //ldr x20, nombre // b = nombre
+    bl scanf
+    ldr x20, nombre // b = nombre
 
     // Lire c
     //bl scanf
