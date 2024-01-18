@@ -14,8 +14,9 @@ main:
     
 
     // Lire b
-    bl scanf
     adr x1, nombre
+    bl scanf
+
     ldr x20, nombre // b = nombre
 
     // Lire c
