@@ -11,7 +11,7 @@ main:
     adr   x1, nombre                //
     bl    scanf                     // scanf(&fmtEntree, &nombre)
     ldr   x19, nombre               // a = nombre
-    bl printf
+    //bl printf
     // Lire b
     //bl scanf
     //ldr x20, nombre // b = nombre
