@@ -33,7 +33,8 @@ aSmallerB:
     bl printf
     adr   x0, fmtEntree
     mov   x1, x20
-
+    bl printf
+    
     cmp x19, x20
     b.hs invalide // regarder que n'est pas 
 
@@ -48,6 +49,7 @@ checkSquare:
     bl printf
     adr   x0, fmtEntree
     mov   x1, x21
+    bl printf
 
     cmp x19, x21
     b.ne invalide
