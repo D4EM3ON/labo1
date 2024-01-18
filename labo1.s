@@ -12,7 +12,7 @@ main:
     bl    scanf                     // scanf(&fmtEntree, &nombre)
     ldr   x19, nombre               // a = nombre
     
-    //adr x0, msgValide
+    adr x0, fmtString
     adr x1, msgInvalide
     bl printf
     // Lire b
@@ -44,5 +44,6 @@ nombre:         .skip   8
 
 .section ".rodata"
 fmtEntree:      .asciz  "%lu"
+fmtString:         .asciz "%s"
 msgValide:      .asciz  "valide\n"
 msgInvalide:    .asciz  "invalide\n"
