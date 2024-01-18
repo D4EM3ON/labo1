@@ -44,7 +44,7 @@ main:
     mov   x1, x19
     bl printf
     adr x0, fmtString
-    adr x1, "\n"
+    adr x1, .asciz "\n"
     adr   x0, fmtEntree            
     mov   x1, 21
     bl printf
